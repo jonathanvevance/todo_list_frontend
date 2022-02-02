@@ -58,6 +58,7 @@ body {
 #container {
   width: 60vw;
   height: auto;
+  min-width: 600px;
   margin: 50px auto;
   border-radius: 10px;
   background-color: var(--dark-blue);
