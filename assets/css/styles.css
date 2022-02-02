@@ -3,6 +3,7 @@
   --darkest-blue: #03045e;
   --dark-blue: #023e8a;
   --gray-blue: #0077b6;
+  --font-color: white;
 
   --transition-speed: 0.2s; /* transition speed */
   font-size: 48px; /* HACK to adjust zoom level */
@@ -19,6 +20,7 @@
 }
 
 body {
+  color: var(--font-color);
   background-color: var(--darkest-blue);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-transition: all var(--transition-speed);
@@ -40,7 +42,7 @@ body {
 }
 
 #addButton:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 #banner {
@@ -50,18 +52,19 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   background-color: var(--gray-blue);
-
-  /* tbd */
-  color: white;
 }
 
 #container {
   width: 60vw;
   height: auto;
   min-width: 600px;
-  margin: 50px auto;
+  margin: 80px auto;
   border-radius: 10px;
   background-color: var(--dark-blue);
+
+  /*  */
+  /* opacity: 0.3;
+  pointer-events: none; */
 }
 
 .fa-trash-alt {
@@ -76,11 +79,35 @@ h1 {
   margin-left: 15px;
 }
 
+#infoButton {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+#infoButton:hover {
+  transform: scale(1.1);
+}
+
+#instruction {
+  padding: 20px;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  z-index: 2;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid white;
+}
+
+#instruction ul {
+  font-size: 60%;
+  line-height: 150%;
+  list-style: none;
+}
+
 li {
   margin: 5px 0;
-
-  /* tbd */
-  color: white;
 }
 
 #taskList {

@@ -55,6 +55,8 @@ const addTask = (taskString) => {
 
 
 // Document queries
+const container = document.getElementById("container")
+const infoButton = document.getElementById("container")
 const addTaskButton = document.getElementById("addButton")
 const addTaskBar = document.getElementById("addBar")
 const taskListUL = document.getElementById("taskList")
