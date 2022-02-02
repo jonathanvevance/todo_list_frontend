@@ -4,11 +4,8 @@
   --dark-blue: #023e8a;
   --gray-blue: #0077b6;
 
-  /* transition speed */
-  --transition-speed: 0.2s;
-
-  /* HACK to adjust zoom level */
-  font-size: 48px;
+  --transition-speed: 0.2s; /* transition speed */
+  font-size: 48px; /* HACK to adjust zoom level */
 }
 
 * {
