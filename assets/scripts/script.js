@@ -1,4 +1,7 @@
-// Helper functions
+// ======================================
+// ======== Helper functions ============
+// ======================================
+
 const addListenersToTaskNode = (taskNode) => {
 
     // delete event listener
@@ -53,15 +56,21 @@ const addTask = (taskString) => {
     taskListUL.insertBefore(taskNode, taskListUL.firstChild)
 }
 
+// ======================================
+// ======== Document queries ============
+// ======================================
 
-// Document queries
 const container = document.getElementById("container")
-const infoButton = document.getElementById("container")
+const infoButton = document.getElementById("infoButton")
+const instructionPane = document.getElementById("instruction")
 const addTaskButton = document.getElementById("addButton")
 const addTaskBar = document.getElementById("addBar")
 const taskListUL = document.getElementById("taskList")
 
-// Set up initial states
+// ======================================
+// ========= Main function ==============
+// ======================================
+
 function main() {
 
     const tasksCollection = taskListUL.children
@@ -83,6 +92,18 @@ function main() {
             let taskString = addTaskBar.value
             addTaskBar.value = ""
             addTask(taskString)
+        }
+    })
+
+    infoButton.addEventListener("click", function() {
+        if (container.style.pointerEvents === "none") {
+            container.style.pointerEvents = "auto"
+            container.style.opacity = 1
+            instructionPane.style.display = "none"
+        } else {
+            container.style.pointerEvents = "none"
+            container.style.opacity = 0.3
+            instructionPane.style.display = "block"
         }
     })
 }
